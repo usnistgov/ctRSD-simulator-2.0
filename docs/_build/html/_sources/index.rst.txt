@@ -3,17 +3,34 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ctRSD-simulator-2.0
-===================
+Table of Contents
+=================
 
-Here you will be able to access infomration on all of the different components of the ctRSD-simlator 2.0. Please take a look at our overview to become familar with the simulator.
+Here you will be able to access information on all of the different components of the ctRSD-simlator 2.0. Please take a look at our overview to become familar with the simulator.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Table of Contents:
+   :maxdepth: 3
+   :caption: General:
 
    Overview
+   Model-Implementation
    Functions
-   Examples
+
+
+.. toctree::
+   :maxdepth: 3
+   :caption: General Examples:
+
+   Simulator-Features
+
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Examples from Publications:
+
+   SA_Examples
+
+
+
    
    

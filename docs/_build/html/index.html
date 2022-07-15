@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ctRSD-simulator-2.0 &mdash; ctRSD-simulator-2.0 2.0.2.1 documentation</title>
+  <title>Table of Contents &mdash; ctRSD-simulator-2.0 2.0.2.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -37,11 +37,19 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Model-Implementation.html">Model Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Functions.html">Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">General Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Simulator-Features.html">Simulator Features</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples from Publications:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SA_Examples.html">2022 Science Advances Paper</a></li>
 </ul>
 
         </div>
@@ -58,7 +66,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>ctRSD-simulator-2.0</li>
+      <li>Table of Contents</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -68,22 +76,144 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ctrsd-simulator-2-0">
-<h1>ctRSD-simulator-2.0<a class="headerlink" href="#ctrsd-simulator-2-0" title="Permalink to this heading"></a></h1>
-<p>Here you will be able to access infomration on all of the different components of the ctRSD-simlator 2.0. Please take a look at our overview to become familar with the simulator.</p>
+  <section id="table-of-contents">
+<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading"></a></h1>
+<p>Here you will be able to access information on all of the different components of the ctRSD-simlator 2.0. Please take a look at our overview to become familar with the simulator.</p>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">General:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Model-Implementation.html">Model Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Functions.html">Functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Functions.html#global-rate-constants">global_rate_constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Functions.html#molecular-species">molecular_species</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Functions.html#simulate-function">simulate function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions.html#simulate">simulate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Functions.html#output-concentration">output_concentration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Functions.html#transcription-calibration">transcription_calibration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">General Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Simulator-Features.html">Simulator Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Simulator-Features.html#calibration-simulation">Calibration Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulator-Features.html#discontinuous-simulation">Discontinuous Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#comparison-to-ctrsd-simulator-1">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#usage-in-ctrsd-simulator-2-0">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Simulator-Features.html#comparator-gate-simulation">Comparator Gate Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id2">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id3">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Simulator-Features.html#three-comparator-gate-simulation">Three Comparator Gate Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id4">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id5">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Simulator-Features.html#thresholding-simulation">Thresholding Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id6">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id7">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Simulator-Features.html#degradation-simulation">Degradation Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id8">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Simulator-Features.html#id9">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Examples from Publications:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SA_Examples.html">2022 Science Advances Paper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-2d">Figure 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#comparison-to-ctrsd-simulator-1">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#usage-in-ctrsd-simulator-2-0">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-4c">Figure 4C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id1">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id2">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-4f">Figure 4F</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id3">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id4">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-4h">Figure 4H</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id5">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id6">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-5b">Figure 5B</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id7">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id8">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-5c">Figure 5C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id9">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id10">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-5d">Figure 5D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id11">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id12">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-5e">Figure 5E</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id13">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id14">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#figure-5f">Figure 5F</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id15">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id16">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-16">SI Figure 16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id17">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id18">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-18">SI Figure 18</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id19">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id20">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-19">SI Figure 19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id21">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id22">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-26">SI Figure 26</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id23">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id24">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-27b">SI Figure 27B</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id25">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id26">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-30c">SI Figure 30C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id27">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id28">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SA_Examples.html#si-figure-31b">SI Figure 31B</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id29">Comparison to ctRSD-simulator-1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SA_Examples.html#id30">Usage in ctRSD-simulator-2.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
