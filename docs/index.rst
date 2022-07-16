@@ -7,6 +7,8 @@
 Download Simulator
 ==================
 
+.. _download_simulator:
+
 Download ctRSD-simulator-2.0 version 2.0.2.1  -> `DOWNLOAD <https://github.com/usnistgov/ctRSD-simulator-2.0/blob/main/Simulatorv2021.py>`_ 
 
 
@@ -30,6 +32,7 @@ Here you will be able to access information on all of the different components o
 
    Overview
    Model-Implementation
+   ImportSim
    Functions
 
 
