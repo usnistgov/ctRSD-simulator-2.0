@@ -880,7 +880,7 @@ class RSD_sim:
                     
             
         else:
-            print("Please check README for correct nomenclature")
+            print("Please check documentation for correct nomenclature")
         
         if (self.AGcheck and self.Fcheck):
             if (self.fuelInd1 == self.AGInd1):
@@ -1185,7 +1185,7 @@ class RSD_sim:
             
         
         else:
-            print("Please check README for correct nomenclature")
+            print("Please check documentation for correct nomenclature")
             
             
     def transcription_calibration(self,simTime,data,ktxn='False'):
