@@ -293,6 +293,8 @@ simulate
 
 simulate()
 
+Test of updating.
+
 .. _output_concentration: 
 
 output_concentration
