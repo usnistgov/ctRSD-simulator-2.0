@@ -50,6 +50,7 @@ Some Functionalities used:
 
 
 
+.. _discontinuous_simulation:
 
 
 Discontinuous Simulation
@@ -301,7 +302,7 @@ The final degredation example simulates a system with degradation rates where si
 Seesaw Simulations
 -------------------
 
-A simulation of an AND gate using the seesaw gate design from "Scaling Up Digital Logic with DNA Strand Displacement Cascades." (Qian and Winfree Science 2011)
+A simulation of an AND gate using the seesaw gate design from `Scaling Up Digital Circuit Computation with DNA Strand Displacement Cascades (Qian and Winfree Science 2011) <https://www.science.org/doi/10.1126/science.1200520>`_.
 
 
 Some Functionalities used:

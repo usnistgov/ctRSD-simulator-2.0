@@ -291,16 +291,67 @@ molecular_species is used to initialize all species involved in the system being
 simulate
 -----------------
 
-simulate()
+simulate(*t_vec*, *leak=0.03*, *leakA=0.06*, *smethod='False'*, *iteration=1*)
 
-Test of updating.
+simulate is used to run a simulation for a provided amount of time using the components previously initialized by molecular_species. simulate also includes the discontinuous feature of the simulator.
+
+**Parameters:**
+	t_vec: *array, type=float*
+		Array of time points signifying the simulation run time.
+	leak: *float*, *if NONE,default=0.03*
+		Transcription leak rate from ctRSD gate.
+	leakA: *float*, *if NONE,default=0.06*
+		Transcription leak rate from ctRSD AND gate.
+	smethod: *string*, *optional*, *if NONE, default='LSODA'*
+		Solver method inputted into scipy.integrate.solve_ivp ODE integrator:
+			* RK45
+			* RK23
+			* DOP853
+			* Radau
+			* BDF (recomended for comparator gate simulations)
+			* LSODA
+	iteration: *int*, *if NONE,default=1*
+		Controlling input for discontinuous feature. 
+
+		Iteration signifies which step in a total simulation that the inputted simulation time and previously initialized species are tied to. For example, iteration=1 signifies first time step of simulation, iteration=2 signifies second time step of same simulation. There is no maximum in iteration, but must be positive integer. 
+
+		Example of discontinuous feature can be found :ref:`here <discontinuous_simulation>`.
+
 
 .. _output_concentration: 
 
 output_concentration
 --------------------
 
-output_concentration()
+output_concentration(*name*)
+
+output_concentration is used to pull out desired output concentrations created after running of the simulate function.
+
+**Parameters:**
+	name: *string*
+		Name of species being initialized
+			* Input -> I{domain} / IN{domain} / INP{domain} / INPUT{domain} (all options work, not case sensitive)
+			* Gate -> G{domainI,domainO} / GATE{domainI,domainO} (all options work, not case sensitive)
+			* Reporter -> R{domain}, REP{domain}, REPORTER{domain} (all options work, not case sensitive)
+			* Output -> O{domainI,domainO} / OUT{domainI,domainO} / OUTPUT{domainI,domainO} (all options work, not case sensitive)
+			* Uncleaved Gate -> uG{domainI,domainO} (not case sensitive)
+			* Gate-Input Complex -> GI{domain} (not case sensitive)
+			* Gate-Output Complex -> GO{domainI,domainO} (not case sensitive)
+			* Reporter-Output Complex -> RO{domainI,domainO} (not case sensitive)
+			* Output Reporter -> S{domain} (not case sensitive)
+			* Uncleaved Threshold -> uTH{domain} (not case sensitive)
+			* Threshold -> TH{domain} (not case sensitive)
+			* Fuel -> F{domain} (not case sensitive)
+			* Fuel Gate -> GF{domain} (not case sensitive)
+			* Uncleaved AND Gate -> uAG{domainI,domainO} (not case sensitive)
+			* AND Gate -> G{domainI1.domainI2,domainO} / GATE{domainI1.domainI2,domainO} / AG{domainI1.domainI2,domainO} (all options work, not case sensitive)
+			* AND Gate-Output Complex A -> AGOa{domainI,domainO} (not case sensitive)
+			* AND Gate-Output Complex B -> AGOb{domainI,domainO} (not case sensitive)
+			* AND Gate Fuel Complex B -> AGF{domain} (not case sensitive)
+			* Uncleaved Comparator Gate -> uCG{domainI,domainO} (not case sensitive)
+			* Comparator Gate -> CG{domainI,domainO} (not case sensitive)
+			* Comparator Gate-Output Complex A -> CGOa{domainI,domainO} (not case sensitive)
+			* Comparator Gate-Output Complex B -> CGOb{domainI,domainO} (not case sensitive)
 
 
 .. _transcription_calibration: 
@@ -308,5 +359,21 @@ output_concentration()
 transcription_calibration
 -------------------------
 
-transcription_calibration()
+transcription_calibration(*simTime*, *data* , *ktxn='False'*)
+
+transcription_calibration is used to test different transcription rates against an inputted set of data and its corresponding time values. The user can test their data against a base set of rates set in the function, or can specify their own rate(s).
+
+**Parameters:**
+	simTime: *array, type=float*
+		Array of time points corresponding to the inputted data set.
+
+	data: *array, type=float*
+		User data set.
+
+	ktxn: *list(type=float) or float*, *optional*
+		Transcription rate(s) the user wishes to calibrate using the dataset. If more than one transcription rate is being inputted, the rates must be formatted as a list, which can be of any length.
+
+		If NONE, simulator will use a base set of transcription rates. (k_txn = [0.005,0.0075,0.01,0.0125,.015,.02])
+
+		Example of transcription_calibration can be found :ref:`here <calibration_simulation>`.
 

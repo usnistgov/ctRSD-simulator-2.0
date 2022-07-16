@@ -291,16 +291,91 @@
 </section>
 <section id="simulate">
 <span id="id3"></span><h2>simulate<a class="headerlink" href="#simulate" title="Permalink to this heading"></a></h2>
-<p>simulate()</p>
-<p>Test of updating.</p>
+<p>simulate(<em>t_vec</em>, <em>leak=0.03</em>, <em>leakA=0.06</em>, <em>smethod=’False’</em>, <em>iteration=1</em>)</p>
+<p>simulate is used to run a simulation for a provided amount of time using the components previously initialized by molecular_species. simulate also includes the discontinuous feature of the simulator.</p>
+<dl>
+<dt><strong>Parameters:</strong></dt><dd><dl>
+<dt>t_vec: <em>array, type=float</em></dt><dd><p>Array of time points signifying the simulation run time.</p>
+</dd>
+<dt>leak: <em>float</em>, <em>if NONE,default=0.03</em></dt><dd><p>Transcription leak rate from ctRSD gate.</p>
+</dd>
+<dt>leakA: <em>float</em>, <em>if NONE,default=0.06</em></dt><dd><p>Transcription leak rate from ctRSD AND gate.</p>
+</dd>
+<dt>smethod: <em>string</em>, <em>optional</em>, <em>if NONE, default=’LSODA’</em></dt><dd><dl class="simple">
+<dt>Solver method inputted into scipy.integrate.solve_ivp ODE integrator:</dt><dd><ul class="simple">
+<li><p>RK45</p></li>
+<li><p>RK23</p></li>
+<li><p>DOP853</p></li>
+<li><p>Radau</p></li>
+<li><p>BDF (recomended for comparator gate simulations)</p></li>
+<li><p>LSODA</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>iteration: <em>int</em>, <em>if NONE,default=1</em></dt><dd><p>Controlling input for discontinuous feature.</p>
+<p>Iteration signifies which step in a total simulation that the inputted simulation time and previously initialized species are tied to. For example, iteration=1 signifies first time step of simulation, iteration=2 signifies second time step of same simulation. There is no maximum in iteration, but must be positive integer.</p>
+<p>Example of discontinuous feature can be found <a class="reference internal" href="Simulator-Features.html#discontinuous-simulation"><span class="std std-ref">here</span></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </section>
 <section id="output-concentration">
 <span id="id4"></span><h2>output_concentration<a class="headerlink" href="#output-concentration" title="Permalink to this heading"></a></h2>
-<p>output_concentration()</p>
+<p>output_concentration(<em>name</em>)</p>
+<p>output_concentration is used to pull out desired output concentrations created after running of the simulate function.</p>
+<dl class="simple">
+<dt><strong>Parameters:</strong></dt><dd><dl class="simple">
+<dt>name: <em>string</em></dt><dd><dl class="simple">
+<dt>Name of species being initialized</dt><dd><ul class="simple">
+<li><p>Input -&gt; I{domain} / IN{domain} / INP{domain} / INPUT{domain} (all options work, not case sensitive)</p></li>
+<li><p>Gate -&gt; G{domainI,domainO} / GATE{domainI,domainO} (all options work, not case sensitive)</p></li>
+<li><p>Reporter -&gt; R{domain}, REP{domain}, REPORTER{domain} (all options work, not case sensitive)</p></li>
+<li><p>Output -&gt; O{domainI,domainO} / OUT{domainI,domainO} / OUTPUT{domainI,domainO} (all options work, not case sensitive)</p></li>
+<li><p>Uncleaved Gate -&gt; uG{domainI,domainO} (not case sensitive)</p></li>
+<li><p>Gate-Input Complex -&gt; GI{domain} (not case sensitive)</p></li>
+<li><p>Gate-Output Complex -&gt; GO{domainI,domainO} (not case sensitive)</p></li>
+<li><p>Reporter-Output Complex -&gt; RO{domainI,domainO} (not case sensitive)</p></li>
+<li><p>Output Reporter -&gt; S{domain} (not case sensitive)</p></li>
+<li><p>Uncleaved Threshold -&gt; uTH{domain} (not case sensitive)</p></li>
+<li><p>Threshold -&gt; TH{domain} (not case sensitive)</p></li>
+<li><p>Fuel -&gt; F{domain} (not case sensitive)</p></li>
+<li><p>Fuel Gate -&gt; GF{domain} (not case sensitive)</p></li>
+<li><p>Uncleaved AND Gate -&gt; uAG{domainI,domainO} (not case sensitive)</p></li>
+<li><p>AND Gate -&gt; G{domainI1.domainI2,domainO} / GATE{domainI1.domainI2,domainO} / AG{domainI1.domainI2,domainO} (all options work, not case sensitive)</p></li>
+<li><p>AND Gate-Output Complex A -&gt; AGOa{domainI,domainO} (not case sensitive)</p></li>
+<li><p>AND Gate-Output Complex B -&gt; AGOb{domainI,domainO} (not case sensitive)</p></li>
+<li><p>AND Gate Fuel Complex B -&gt; AGF{domain} (not case sensitive)</p></li>
+<li><p>Uncleaved Comparator Gate -&gt; uCG{domainI,domainO} (not case sensitive)</p></li>
+<li><p>Comparator Gate -&gt; CG{domainI,domainO} (not case sensitive)</p></li>
+<li><p>Comparator Gate-Output Complex A -&gt; CGOa{domainI,domainO} (not case sensitive)</p></li>
+<li><p>Comparator Gate-Output Complex B -&gt; CGOb{domainI,domainO} (not case sensitive)</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
 </section>
 <section id="transcription-calibration">
 <span id="id5"></span><h2>transcription_calibration<a class="headerlink" href="#transcription-calibration" title="Permalink to this heading"></a></h2>
-<p>transcription_calibration()</p>
+<p>transcription_calibration(<em>simTime</em>, <em>data</em> , <em>ktxn=’False’</em>)</p>
+<p>transcription_calibration is used to test different transcription rates against an inputted set of data and its corresponding time values. The user can test their data against a base set of rates set in the function, or can specify their own rate(s).</p>
+<dl>
+<dt><strong>Parameters:</strong></dt><dd><dl>
+<dt>simTime: <em>array, type=float</em></dt><dd><p>Array of time points corresponding to the inputted data set.</p>
+</dd>
+<dt>data: <em>array, type=float</em></dt><dd><p>User data set.</p>
+</dd>
+<dt>ktxn: <em>list(type=float) or float</em>, <em>optional</em></dt><dd><p>Transcription rate(s) the user wishes to calibrate using the dataset. If more than one transcription rate is being inputted, the rates must be formatted as a list, which can be of any length.</p>
+<p>If NONE, simulator will use a base set of transcription rates. (k_txn = [0.005,0.0075,0.01,0.0125,.015,.02])</p>
+<p>Example of transcription_calibration can be found <a class="reference internal" href="Simulator-Features.html#calibration-simulation"><span class="std std-ref">here</span></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </section>
 </section>
 
