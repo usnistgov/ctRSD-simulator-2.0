@@ -293,3 +293,115 @@ The final degredation example simulates a system with degradation rates where si
    :align: center
 
    **Degradation Simulation (Changing Groups of Degradation Rates**
+
+
+
+
+
+Seesaw Simulations
+-------------------
+
+A simulation of an AND gate using the seesaw gate design from "Scaling Up Digital Logic with DNA Strand Displacement Cascades." (Qian and Winfree Science 2011)
+
+
+Some Functionalities used:
+   * globally changing rates with :ref:`global_rate_constants <global_rate_constants>`
+   * changing initial condtions/indiviudal rates within :ref:`molecular_species <molecular_species>`
+   * launching simulation using :ref:`simulate <simulate>`
+   * pulling out desired output concentrations using :ref:`output_concentration <output_concentration>`
+
+
+
+ctRSD Seesaw Simulation
++++++++++++++++++++++++++++++++
+`ctRSD Seesaw Simulation Comparison Python Script can be found here <https://github.com/usnistgov/ctRSD-simulator-2.0/blob/main/Examples/seesaw_simulation_ctRSD.py>`_ 
+
+.. figure:: /ExampleImages/seesaw_simulation_ctRSD.svg
+   :class: with-border
+   :align: center
+
+   **ctRSD Seesaw Simulation Comparison**
+
+
+
+DNA Seesaw Simulation
+++++++++++++++++++++++++++++
+`DNA Seesaw Simulation Python Script can be found here <https://github.com/usnistgov/ctRSD-simulator-2.0/blob/main/Examples/seesaw_simulation_DNA.py>`_ 
+
+.. figure:: /ExampleImages/seesaw_simulation_DNA.svg
+   :class: with-border
+   :align: center
+
+   **DNA Seesaw Simulation**
+
+
+
+
+
+
+
+Two-Toehold Simulation
+----------------------------
+Two-Toehold Simulation shows the differing results of a multi toehold system.
+
+Some Functionalities used:
+   * globally changing rates with :ref:`global_rate_constants <global_rate_constants>`
+   * changing initial condtions/indiviudal rates within :ref:`molecular_species <molecular_species>`
+   * launching simulation using :ref:`simulate <simulate>`
+   * pulling out desired output concentrations using :ref:`output_concentration <output_concentration>`
+
+
+
+`Two Toehold Sim Python Script can be found here <https://github.com/usnistgov/ctRSD-simulator-2.0/blob/main/Examples/TwoToehold_simulation.py>`_ 
+
+.. figure:: /ExampleImages/TwoToehold_simulation.svg
+   :class: with-border
+   :align: center
+
+   **Two-Toehold Simulation**
+
+
+
+
+AND Gate with Fuel Simulation
+------------------------------
+This simulation shows a basic ctRSD AND gate system, but with fuel added to one of the inputs using :ref:`molecular_species <molecular_species>`
+
+Some Functionalities used:
+   * globally changing rates with :ref:`global_rate_constants <global_rate_constants>`
+   * changing initial condtions/indiviudal rates within :ref:`molecular_species <molecular_species>`
+   * launching simulation using :ref:`simulate <simulate>`
+   * pulling out desired output concentrations using :ref:`output_concentration <output_concentration>`
+
+
+
+`AG Fuel Sim Python Script can be found here <https://github.com/usnistgov/ctRSD-simulator-2.0/blob/main/Examples/AGfuel_simulations.py>`_ 
+
+.. figure:: /ExampleImages/AGfuel_simulations.svg
+   :class: with-border
+   :align: center
+
+   **AG Fuel Simulation**
+
+
+
+
+Two Minterm Simulation
+----------------------------
+Two Minterm Simulation shows a 4-input, 2 ctRSD AND gate system. (ex. AB + CD)
+
+Some Functionalities used:
+   * globally changing rates with :ref:`global_rate_constants <global_rate_constants>`
+   * changing initial condtions/indiviudal rates within :ref:`molecular_species <molecular_species>`
+   * launching simulation using :ref:`simulate <simulate>`
+   * pulling out desired output concentrations using :ref:`output_concentration <output_concentration>`
+
+
+
+`Two Minterm Simulation Python Script can be found here <https://github.com/usnistgov/ctRSD-simulator-2.0/blob/main/Examples/AB+CD_simulations.py>`_ 
+
+.. figure:: /ExampleImages/AB+CD_simulations.svg
+   :class: with-border
+   :align: center
+
+   **Two Minterm Simulation**
